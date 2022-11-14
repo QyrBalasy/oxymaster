@@ -7,10 +7,25 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  position: relative;
+  &-blur {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 96px;
+    bottom: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0),
+      rgb(26, 26, 26)
+    );
+    z-index: 5;
+  }
 }
 
 .section-one {
   padding: 59px 0 107px;
+  position: relative;
   &__items {
     display: flex;
     flex-direction: column;
@@ -32,6 +47,97 @@ section {
           height: 41px;
         }
       }
+    }
+  }
+}
+
+.section-two {
+  position: relative;
+  & > svg {
+    position: absolute;
+    bottom: -135px;
+    left: -75px;
+    width: 340px;
+    height: 318px;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    &-description {
+      display: flex;
+      flex-direction: column;
+      row-gap: 53px;
+    }
+    &-table {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(170px, 1fr));
+      row-gap: 50px;
+      column-gap: 70px;
+      & span {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        & p {
+          font-size: 16px;
+          line-height: 24px;
+          margin-top: 10px;
+        }
+        & svg {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}
+
+.section-three {
+  &__items {
+    border-radius: 18px;
+    background-color: $white;
+    padding: 59px 0 71px 101px;
+    &-wrapper {
+      display: flex;
+      gap: 74px;
+      & > div {
+        max-width: 467px;
+      }
+    }
+    & h2,
+    p {
+      color: $graphite;
+    }
+    & h2 {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.section-four {
+  &__items {
+    display: flex;
+    position: relative;
+    & img {
+      border-radius: 6px;
+      max-width: 793px;
+    }
+    &-description {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      // height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      background-color: #fff;
+      padding: 34px 54px;
+      border-radius: 6px;
+      color: #a1a1a1;
+      align-self: center;
     }
   }
 }

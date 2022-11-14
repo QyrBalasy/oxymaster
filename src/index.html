@@ -3,16 +3,137 @@
   @@include('html/head.html', { "title": "[The Loop]" })
   <body>
     <div class="slogan">
-      @@include('html/header.html', {})
-      @@include('html/slogan.html', {})
+      @@include('html/header.html', {}) @@include('html/slogan.html', {})
+      <span class="slogan-blur"></span>
     </div>
     <main>
-      <section class="secion-two">
+      <section class="section-two">
+        <svg>
+          <defs>
+            <filter id="blur">
+              <feGaussianBlur stdDeviation="5" />
+            </filter>
+          </defs>
+          <use
+            xlink:href="@img/icons/icons.svg#logo-notext"
+            filter="url(#blur)"
+          ></use>
+        </svg>
         <div class="container">
-
+          <div class="section-two__items">
+            <div class="section-two__items-description">
+              <h2>Кислород в баллонах</h2>
+              <p>
+                Кислород – это бесцветный газ без запаха и вкуса, который не
+                растворяется в воде. В газообразном или жидком состоянии он не
+                токсичен и не взрывоопасен, но может поддерживать процессы
+                горения. В больших концентрациях он может вызывать возгорание
+                ряда химических материалов.
+              </p>
+              <p>
+                В первую очередь, нужно знать, что можно купить медицинский
+                кислород, а можно – технический. Каждый из этих видов
+                используется для различных целей.
+              </p>
+            </div>
+            <div class="section-two__items-table">
+              <span>
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#energy-icon"></use>
+                </svg>
+                <p>Энергетика</p>
+              </span>
+              <span>
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#Agriculture"></use>
+                </svg>
+                <p>Сельское хозяйство</p>
+              </span>
+              <span>
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#petroleum-icon"></use>
+                </svg>
+                <p>Нефтедобыча</p>
+              </span>
+              <span>
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#construction"></use>
+                </svg>
+                <p>Строительство</p>
+              </span>
+              <span>
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#Metallurgy"></use>
+                </svg>
+                <p>Металлургия</p>
+              </span>
+              <span>
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#Mining-icon"></use>
+                </svg>
+                <p>Горнодобывающая промышленность</p>
+              </span>
+            </div>
+          </div>
         </div>
       </section>
-
+      <section class="section-three">
+        <div class="container">
+          <div class="section-three__items">
+            <h2>Кислород в баллонах oxy master</h2>
+            <div class="section-three__items-wrapper">
+              <div>
+                <p>
+                  Мы предлагаем приобрести у нас кислород газообразный в
+                  баллонах по оптимальной стоимости, с доставкой по Казахстану.
+                  Конкурентоспособные цены на нашу продукцию обусловлены тем,
+                  что мы сотрудничаем непосредственно с производителем газа,
+                  являясь поставщиком на территории РК.
+                </p>
+                <p>
+                  При этом в качестве предлагаемых технических и промышленных
+                  газов вы также можете не сомневаться: их высокий качественный
+                  уровень подтвержден сертификатами соответствия ГОСТУ.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="@img/gas-cylinder-info.png"
+                  alt="gas cylinder image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-four">
+        <div class="container">
+          <div class="section-four__items">
+            <img src="@img/photo-adv.png" alt="" />
+            <div class="section-four__items-description">
+              <h3>Наши преимущества:</h3>
+              <ul>
+                <li>
+                  <p>Собственное производство</p>
+                </li>
+                <li>
+                  <p>Высокое качество кислорода</p>
+                </li>
+                <li>
+                  <p>Гарантия безопасности</p>
+                </li>
+                <li>
+                  <p>Оперативная доставка</p>
+                </li>
+                <li>
+                  <p>Низкие цены</p>
+                </li>
+              </ul>
+              <button>Сделать заказ</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('html/footer.html', {})
     <script src="js/app.min.js"></script>
