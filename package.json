@@ -1,5 +1,5 @@
 {
-  "name": "theloop",
+  "name": "oxymaster",
   "version": "1.0.0",
   "description": "landing page",
   "main": "gulpfile.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QyrBalasy/theloop.git"
+    "url": "git+https://github.com/QyrBalasy/oxymaster.git"
   },
   "author": "qyrbalasy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/QyrBalasy/theloop/issues"
+    "url": "https://github.com/QyrBalasy/oxymaster/issues"
   },
-  "homepage": "https://github.com/QyrBalasy/theloop#readme",
+  "homepage": "https://github.com/QyrBalasy/oxymaster#readme",
   "dependencies": {
     "browser-sync": "^2.27.10",
     "del": "^7.0.0",
