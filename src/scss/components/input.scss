@@ -1,0 +1,53 @@
+//toggle swtich
+.toggle-lang {
+  position: relative;
+  padding: 0;
+  width: 84px;
+  height: 34px;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: 0.3s;
+  cursor: pointer;
+  &:disabled {
+    background-color: #e8ecee;
+  }
+  &::after {
+    content: "RU";
+    position: absolute;
+    font-family: RFDewi;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    // width: 18px;
+    // height: 18px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    background-color: #DBE8FE;
+    // box-shadow: 0px 1px 1px #000000;
+    top: 2px;
+    left: 1px;
+    transition: all 0.5s;
+  }
+  // &:checked {
+  //   background-color: #e8ecee;
+  // }
+  &:checked::after {
+    content: "KZ";
+    font-family: RFDewi;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    position: absolute;
+    background-color: #DBE8FE;
+    border-radius: 2px;
+    padding: 2px 4px;
+    // box-shadow: 0px 1px 1px #000000;
+    top: 2px;
+    left: 45px;
+  }
+  &:disabled::after {
+    background-color: #486377;
+  }
+}

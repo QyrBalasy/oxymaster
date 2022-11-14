@@ -1,0 +1,59 @@
+@import "base/module";
+@import 'components/module';
+@import 'layout/module.scss';
+@import 'pages/module.scss';
+
+@import "fonts.scss";
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 1px solid #A1C4FF;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Montserrat;
+  font-weight: 400;
+  color: $white;
+  background-color: $bg-color;
+}
+
+p {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  // color: $light-black;
+}
+
+a {
+  text-decoration: none;
+}
+
+// @media (max-width: 768px){
+//   span {
+//     font-size: 20px;
+//   }
+// }
+
+// @media (max-width: 768px){
+//   body {
+//       background-color: green;
+//     }
+// }

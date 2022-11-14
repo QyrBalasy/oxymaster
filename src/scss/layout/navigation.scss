@@ -1,0 +1,15 @@
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  &-item a{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $white;
+    transition: all ease-in 0.2s ;
+    &:hover{
+      color: #A1C4FF;
+    }
+  } 
+}

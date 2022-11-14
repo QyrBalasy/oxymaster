@@ -1,0 +1,37 @@
+section {
+  margin: 140px 0;
+}
+
+.slogan {
+  background-image: url("@img/background-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.section-one {
+  padding: 59px 0 107px;
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 66px;
+    max-width: 656px;
+    & p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    &-info {
+      display: flex;
+      gap: 22px;
+      & span {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        & svg {
+          width: 40px;
+          height: 41px;
+        }
+      }
+    }
+  }
+}
