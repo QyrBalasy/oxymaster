@@ -1,6 +1,6 @@
 section {
   margin: 140px 0;
-  &:last-child{
+  &:last-child {
     margin: 0;
   }
 }
@@ -199,7 +199,8 @@ section {
       position: absolute;
       z-index: 1;
       right: 0;
-      // height: 100%;
+      max-width: 508px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 30px;
@@ -208,6 +209,20 @@ section {
       border-radius: 6px;
       color: #a1a1a1;
       align-self: center;
+      & li {
+        display: flex;
+        gap: 23px;
+        align-items: center;
+        margin: 20px 0;
+        color: $graphite;
+        &:last-child {
+          margin: 0;
+        }
+        & svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
 }
