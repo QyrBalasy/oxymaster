@@ -99,12 +99,73 @@ section {
   &__items {
     border-radius: 18px;
     background-color: $white;
-    padding: 59px 0 71px 101px;
+    padding: 59px 21px 0px 101px;
+    position: relative;
+    overflow: hidden;
+    & > svg:first-of-type {
+      width: 64px;
+      height: 62px;
+      position: absolute;
+      left: 17px;
+    }
     &-wrapper {
       display: flex;
       gap: 74px;
-      & > div {
+      & > div:first-child {
         max-width: 467px;
+        flex-basis: 50%;
+      }
+    }
+    &-info {
+      display: flex;
+      flex-basis: 50%;
+      position: relative;
+      & > img {
+        margin: 0 auto;
+        z-index: 3;
+        // position: relative;
+      }
+      & > span {
+        position: absolute;
+        border: 1px solid $yellow;
+        display: flex;
+        gap: 13px;
+        border-radius: 4px;
+        padding: 7px 14px;
+        align-items: center;
+        background-color: $white;
+        z-index: 2;
+        & p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        // color: ;
+        & svg {
+          width: 41px;
+          height: 41px;
+        }
+        &:nth-of-type(1) {
+          right: 0;
+          top: -25px;
+        }
+        &:nth-of-type(3) {
+          bottom: 90px;
+        }
+        &:nth-of-type(2) {
+          top: 120px;
+        }
+        &:last-of-type {
+          width: 253px;
+          height: 245px;
+          background-color: rgba(66, 176, 229, 0.5);
+          border: none;
+          left: 50%;
+          bottom: 0;
+          transform: translate(-50%, 0);
+          filter: blur(100px);
+          z-index: 1;
+        }
       }
     }
     & h2,
