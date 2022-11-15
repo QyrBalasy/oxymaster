@@ -1,15 +1,34 @@
 .main-button {
-  background-color: $button-color;
-  padding: 26px 60px;
+  background-color: $yellow;
+  padding: 10px 36px;
   border: none;
-  border-radius: 16px;
+  border-radius: 8px;
   width: fit-content;
   cursor: pointer;
   transition: all ease-out .3s;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
+  color: $graphite;
   &:hover{
-    background-color: $light-blue;
+    background-color: $dark-orange;
+  }
+}
+
+.secondary-button {
+  background-color: transparent;
+  padding: 10px 36px;
+  border: 1px solid $graphite;
+  border-radius: 3px;
+  width: fit-content;
+  cursor: pointer;
+  transition: all ease-out .3s;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $graphite;
+  &:hover{
+    background-color: $graphite;
+    color: $white;
   }
 }

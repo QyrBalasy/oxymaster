@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   gap: 70px;
+  align-items: center;
   &-item a{
     font-size: 16px;
     line-height: 20px;
@@ -9,7 +10,7 @@
     color: $white;
     transition: all ease-in 0.2s ;
     &:hover{
-      color: #A1C4FF;
+      color: $dark-orange-click;
     }
   } 
 }

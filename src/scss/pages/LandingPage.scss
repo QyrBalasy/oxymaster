@@ -1,5 +1,8 @@
 section {
   margin: 140px 0;
+  &:last-child{
+    margin: 0;
+  }
 }
 
 .slogan {
@@ -179,6 +182,12 @@ section {
 }
 
 .section-four {
+  position: relative;
+  & > img {
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+  }
   &__items {
     display: flex;
     position: relative;
@@ -199,6 +208,105 @@ section {
       border-radius: 6px;
       color: #a1a1a1;
       align-self: center;
+    }
+  }
+}
+
+.section-five {
+  &__description {
+    margin-bottom: 110px;
+    display: flex;
+    justify-content: space-between;
+    &-text {
+      max-width: 590px;
+      & h2 {
+        margin-bottom: 57px;
+      }
+    }
+    &-stickers {
+      & table {
+        border-spacing: 16px;
+        empty-cells: show;
+        & span {
+          border-radius: 50%;
+          background-color: $light-yellow;
+          width: 15px;
+          height: 15px;
+          padding: 8px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    &-card {
+      position: relative;
+      border-radius: 6px;
+      background-color: $light-yellow;
+      padding: 70px 12px 40px;
+      text-align: center;
+      & span {
+        position: absolute;
+        right: 50%;
+        top: 0;
+        transform: translate(50%, -50%);
+        background-color: $white;
+        border-radius: 50%;
+        width: 90px;
+        height: 92px;
+        display: flex;
+        align-items: center;
+        & img {
+          width: 60px;
+          height: 60px;
+          margin: 0 auto;
+          object-fit: cover;
+        }
+      }
+      & p {
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $graphite;
+      }
+    }
+  }
+}
+
+.section-six {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    &-info {
+      padding: 54px 0 36px;
+      max-width: 448px;
+      border: 1px solid $white;
+      border-right: none;
+      & h3 {
+        color: $yellow;
+      }
+      & p {
+        padding: 31px 0 42px;
+      }
+      & ul {
+        & li {
+          display: flex;
+          align-items: center;
+          gap: 26px;
+          margin-bottom: 26px;
+          & svg {
+            width: 41px;
+            height: 41px;
+          }
+          & a {
+            color: $white;
+          }
+        }
+      }
     }
   }
 }

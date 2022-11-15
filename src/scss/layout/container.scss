@@ -1,6 +1,7 @@
 .container{
   max-width: $max-widthContainer + px;
   margin: 0 auto;
+  position: relative;
   @media (max-width: $laptop) {
       max-width: 1200px;
     }

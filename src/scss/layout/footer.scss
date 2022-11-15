@@ -16,6 +16,10 @@
         line-height: 20px;
         font-weight: 400;
         color: $white;
+        transition: all ease-in 0.2s;
+        &:hover {
+          color: $dark-orange-click;
+        }
       }
     }
     &__links {
@@ -25,8 +29,12 @@
         font-weight: 400;
         color: $white;
         margin: 0 auto;
+        transition: all ease-in 0.2s;
+        &:hover {
+          color: $dark-orange-click;
+        }
       }
-      &-icons{
+      &-icons {
         margin-top: 20px;
         display: flex;
         gap: 23px;
@@ -34,8 +42,8 @@
           width: 33px;
           height: 33px;
           fill: $grey;
-          transition: all ease-in .3s;
-          &:hover{
+          transition: all ease-in 0.3s;
+          &:hover {
             fill: $yellow;
           }
         }
