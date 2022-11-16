@@ -71,37 +71,6 @@
   }
 }
 
-// .closeModal::before,
-// .closeModal::after {
-//   content: "";
-//   position: absolute;
-//   top: 10px;
-//   display: block;
-//   width: 24px;
-//   height: 3px;
-//   background: #000;
-// }
-
-// .closeModal::before {
-//   transform: rotate(45deg);
-// }
-
-// .closeModal::after {
-//   transform: rotate(-45deg);
-// }
-
-// .close-button {
-//   text-align: center;
-//   cursor: pointer;
-//   color: #323232;
-//   font-size: 20px;
-//   position: absolute;
-//   right: 31px;
-//   top: 30px;
-// }
-// .close-button:hover {
-//   // background-color: darkgray;
-// }
 .show-modal {
   opacity: 1;
   visibility: visible;
