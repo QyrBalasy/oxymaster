@@ -367,10 +367,14 @@ section {
 
 .section-four {
   position: relative;
-  & > img {
+  &__img {
     position: absolute;
     left: 0;
     bottom: -50%;
+    background-image: url("@img/smoke.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
   }
   @media (max-width: $laptop) {
     .img-tablet {

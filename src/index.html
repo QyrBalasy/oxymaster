@@ -3,8 +3,7 @@
   @@include('html/head.html', { "title": "oxymaster - кислород в баллонах" })
   <body>
     <div class="slogan">
-      @@include('html/header.html', {})
-      @@include('html/slogan.html', {})
+      @@include('html/header.html', {}) @@include('html/slogan.html', {})
       <span class="slogan-blur"></span>
     </div>
     <main>
@@ -84,7 +83,10 @@
             <svg>
               <use xlink:href="@img/icons/icons.svg#logo-notext"></use>
             </svg>
-            <h2>Кислород в баллонах <br/> oxy master</h2>
+            <h2>
+              Кислород в баллонах <br />
+              oxy master
+            </h2>
             <div class="section-three__items-wrapper">
               <div>
                 <p>
@@ -123,12 +125,12 @@
           </div>
         </div>
       </section>
-      <section class="section-four" id="adv">
-        <img src="@img/smoke.png" alt="дым" />
+      <section class="section-four" id="advantages">
+        <div class="section-four__img"></div>
         <div class="container">
           <div class="section-four__items">
             <img src="@img/photo-adv.png" alt="" class="img-tablet" />
-            <img src="@img/photo-adv-laptop.png" alt="" class="img-laptop"/>
+            <img src="@img/photo-adv-laptop.png" alt="" class="img-laptop" />
             <div class="section-four__items-description">
               <h3>Наши преимущества:</h3>
               <ul>
@@ -209,8 +211,14 @@
                   alt="Заправка баллонов"
                 />
               </span>
-              <h3>Заправка <br/> баллонов</h3>
-              <p>Заправляем в тару заказчика, предоставляем <br/> емкости в аренду</p>
+              <h3>
+                Заправка <br />
+                баллонов
+              </h3>
+              <p>
+                Заправляем в тару заказчика, предоставляем <br />
+                емкости в аренду
+              </p>
             </div>
             <div class="section-five__items-card">
               <span>
@@ -230,7 +238,10 @@
                   class="svg-settings-dims"
                   alt="settings"
               /></span>
-              <h3>Оптовая <br/> продажа</h3>
+              <h3>
+                Оптовая <br />
+                продажа
+              </h3>
               <p>Продажа оптом кислородных баллонов по низкой цене</p>
             </div>
             <div class="section-five__items-card">
@@ -274,7 +285,6 @@
                 </li>
               </ul>
             </div>
-            
           </div>
         </div>
       </section>
