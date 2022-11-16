@@ -1,19 +1,6 @@
 .header {
   position: relative;
   padding: 26px 0;
-  &::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    // background: linear-gradient(#F3F7FE, transparent);
-    background-image: url("@img/background-header.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    // height: 993px;
-    z-index: -1;
-  }
   .header-elements {
     display: flex;
     justify-content: space-between;
@@ -30,11 +17,16 @@
       }
     }
 
-    &__menu {
-    }
     @media (max-width: $laptop) {
       justify-content: flex-start;
       gap: 60px;
+    }
+
+    @media (max-width: $tablet) {
+      justify-content: space-between;
+      &__menu {
+        display: none;
+      }
     }
   }
 }
