@@ -83,7 +83,10 @@
             <svg>
               <use xlink:href="@img/icons/icons.svg#logo-notext"></use>
             </svg>
-            <h2>Кислород в баллонах oxy master</h2>
+            <h2>
+              Кислород в баллонах <br />
+              oxy master
+            </h2>
             <div class="section-three__items-wrapper">
               <div>
                 <p>
@@ -93,7 +96,6 @@
                   что мы сотрудничаем непосредственно с производителем газа,
                   являясь поставщиком на территории РК.
                 </p>
-                <br />
                 <p>
                   При этом в качестве предлагаемых технических и промышленных
                   газов вы также можете не сомневаться: их высокий качественный
@@ -123,11 +125,12 @@
           </div>
         </div>
       </section>
-      <section class="section-four" id="adv">
-        <img src="@img/smoke.png" alt="дым" />
+      <section class="section-four" id="advantages">
+        <div class="section-four__img"></div>
         <div class="container">
           <div class="section-four__items">
-            <img src="@img/photo-adv.png" alt="" />
+            <img src="@img/photo-adv.png" alt="" class="img-tablet" />
+            <img src="@img/photo-adv-laptop.png" alt="" class="img-laptop" />
             <div class="section-four__items-description">
               <h3>Наши преимущества:</h3>
               <ul>
@@ -208,8 +211,14 @@
                   alt="Заправка баллонов"
                 />
               </span>
-              <h3>Заправка баллонов</h3>
-              <p>Заправляем в тару заказчика, предоставляем емкости в аренду</p>
+              <h3>
+                Заправка <br />
+                баллонов
+              </h3>
+              <p>
+                Заправляем в тару заказчика, предоставляем <br />
+                емкости в аренду
+              </p>
             </div>
             <div class="section-five__items-card">
               <span>
@@ -229,7 +238,10 @@
                   class="svg-settings-dims"
                   alt="settings"
               /></span>
-              <h3>Оптовая продажа</h3>
+              <h3>
+                Оптовая <br />
+                продажа
+              </h3>
               <p>Продажа оптом кислородных баллонов по низкой цене</p>
             </div>
             <div class="section-five__items-card">
@@ -273,7 +285,6 @@
                 </li>
               </ul>
             </div>
-            <img src="@img/flames.png" alt="flames background" />
           </div>
         </div>
       </section>
@@ -281,16 +292,31 @@
     @@include('html/footer.html', {})
     <div class="modal">
       <div class="modal-content">
-        <span class="close-button">×</span>
+        <span class="close-button"></span>
         <h3>Оставьте заявку, и вам перезвонят в скором времени</h3>
         <form method="post">
-          <input
-            type="tel"
-            data-tel-input
-            placeholder="Введите телефон"
-            maxlength="18"
-          />
-          <button type="submit">Отправить</button>
+          <div class="input-wrapper">
+            <label for="name">Имя</label>
+            <input
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Ваше имя"
+              maxlength="30"
+              class="input"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="name">Номер телефона</label>
+            <input
+              type="tel"
+              data-tel-input
+              placeholder="Введите телефон"
+              maxlength="18"
+              class="input"
+            />
+          </div>
+          <button type="submit" class="modal-button">Оставить заявку</button>
         </form>
       </div>
     </div>

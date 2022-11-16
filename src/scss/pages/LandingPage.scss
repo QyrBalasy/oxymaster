@@ -3,6 +3,18 @@ section {
   &:last-child {
     margin: 0;
   }
+  @media (max-width: $laptop) {
+    margin: 145px 0;
+    &:first-child {
+      margin-top: 31px;
+    }
+  }
+  @media (max-width: $tablet) {
+    margin: 129px 0;
+  }
+  @media (max-width: $L-mobile) {
+    margin: 68px 0;
+  }
 }
 
 .slogan {
@@ -23,6 +35,15 @@ section {
       rgb(26, 26, 26)
     );
     z-index: 5;
+    @media (max-width: $L-mobile) {
+      height: 25px;
+    }
+  }
+  @media (max-width: $laptop) {
+    background-position: right center;
+  }
+  @media (max-width: $tablet) {
+    background-image: url("@img/background-header-tablet.png");
   }
 }
 
@@ -37,10 +58,28 @@ section {
     & p {
       font-size: 20px;
       line-height: 30px;
+      @media (max-width: $tablet) {
+        padding-bottom: 10px;
+      }
+      @media (max-width: $L-mobile) {
+        padding-bottom: 0;
+      }
     }
     &-info {
       display: flex;
-      gap: 22px;
+      gap: 48px;
+      @media (max-width: $laptop) {
+        gap: 40px;
+      }
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        row-gap: 30px;
+      }
+      @media (max-width: $L-mobile) {
+        align-items: center;
+        padding-top: 16px;
+      }
+
       & span {
         display: flex;
         align-items: center;
@@ -52,38 +91,92 @@ section {
       }
     }
   }
+  @media (max-width: $laptop) {
+    padding: 52px 0 114px;
+    &__items {
+      row-gap: 64px;
+    }
+  }
+  @media (max-width: $tablet) {
+    padding: 39px 0 73px;
+    &__items {
+      row-gap: 50px;
+    }
+  }
+  @media (max-width: $L-mobile) {
+    padding: 20px 0 29px;
+    &__items {
+      row-gap: 28px;
+    }
+  }
 }
 
 .section-two {
   position: relative;
   & > svg {
     position: absolute;
-    bottom: -135px;
-    left: -75px;
-    width: 340px;
-    height: 318px;
+    bottom: -115px;
+    left: -30px;
+    width: 330px;
+    height: 330px;
     opacity: 0.8;
     z-index: -1;
+
+    @media (max-width: $laptop) {
+      bottom: -137px;
+      width: 262px;
+      height: 254px;
+      left: -17px;
+    }
+    @media (max-width: $tablet) {
+      bottom: 30%;
+      left: -40px;
+    }
+    @media (max-width: $L-mobile) {
+      left: -110px;
+    }
   }
   &__items {
     display: flex;
-    justify-content: space-between;
-    gap: 100px;
+    justify-content: flex-start;
+    gap: 85px;
     &-description {
       display: flex;
       flex-direction: column;
       row-gap: 53px;
+      max-width: 692px;
+      @media (max-width: $tablet) {
+        row-gap: 26px;
+      }
     }
     &-table {
       display: grid;
-      grid-template-columns: repeat(2, minmax(170px, 1fr));
-      row-gap: 50px;
-      column-gap: 70px;
+      grid-template-columns: repeat(2, minmax(165px, 1fr));
+      row-gap: 62px;
+      column-gap: 30px;
+      align-items: center;
+      justify-items: start;
+      @media (max-width: $laptop) {
+        row-gap: 65px;
+      }
+      @media (max-width: $tablet) {
+        grid-template-columns: repeat(3, minmax(auto, 1fr));
+        justify-items: center;
+      }
+      @media (max-width: $laptop) {
+        row-gap: 30px;
+      }
+      @media (max-width: $mobile) {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+      }
+
       & span {
         text-align: center;
         display: flex;
         align-items: center;
         flex-direction: column;
+        max-width: 163px;
+        width: 100%;
         & p {
           font-size: 16px;
           line-height: 24px;
@@ -94,6 +187,19 @@ section {
           height: 48px;
         }
       }
+      @media (max-width: $laptop) {
+        padding-top: 85px;
+        column-gap: 0px;
+      }
+      @media (max-width: $laptop) {
+        padding-top: 45px;
+      }
+    }
+    @media (max-width: $laptop) {
+      gap: 0;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
     }
   }
 }
@@ -105,28 +211,81 @@ section {
     padding: 59px 21px 0px 101px;
     position: relative;
     overflow: hidden;
+    @media (max-width: $laptop) {
+      padding: 54px 17px 0px 72px;
+    }
+    @media (max-width: $tablet) {
+      padding: 54px 34px 0px 66px;
+    }
+    @media (max-width: $L-mobile) {
+      padding: 48px 25px 0px 24px;
+    }
     & > svg:first-of-type {
       width: 64px;
       height: 62px;
       position: absolute;
       left: 17px;
+      @media (max-width: $laptop) {
+        width: 45px;
+        height: 43px;
+      }
+      @media (max-width: $L-mobile) {
+        width: 22px;
+        height: 22px;
+        top: 10px;
+        left: 13px;
+      }
     }
+    & h2 > br {
+      display: none;
+      @media (max-width: $laptop) {
+        display: block;
+      }
+    }
+
     &-wrapper {
       display: flex;
       gap: 74px;
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        gap: 0;
+      }
       & > div:first-child {
-        max-width: 467px;
+        width: 467px;
         flex-basis: 50%;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $laptop) {
+          padding-bottom: 50px;
+          gap: 30px;
+        }
+        @media (max-width: $tablet) {
+          width: 531px;
+          // padding-bottom: 140px;
+        }
+        @media (max-width: $L-mobile) {
+          max-width: 450px;
+          width: 100%;
+        }
       }
     }
     &-info {
       display: flex;
       flex-basis: 50%;
       position: relative;
+      @media (max-width: $tablet) {
+        padding-top: 90px;
+      }
       & > img {
         margin: 0 auto;
         z-index: 3;
         // position: relative;
+        @media (max-width: $laptop) {
+          object-fit: contain;
+          max-width: 201px;
+          align-self: end;
+        }
       }
       & > span {
         position: absolute;
@@ -150,13 +309,35 @@ section {
         }
         &:nth-of-type(1) {
           right: 0;
-          top: -25px;
+          top: -37px;
+          @media (max-width: $laptop) {
+            top: 15px;
+          }
         }
         &:nth-of-type(3) {
-          bottom: 90px;
+          bottom: 85px;
+          left: 10px;
+          @media (max-width: $laptop) {
+            bottom: 90px;
+            left: -30px;
+            z-index: 3;
+          }
+          @media (max-width: $tablet) {
+            bottom: 105px;
+            left: 0;
+          }
         }
         &:nth-of-type(2) {
-          top: 120px;
+          top: 130px;
+          @media (max-width: $laptop) {
+            top: 263px;
+            left: -41px;
+            z-index: 3;
+          }
+          @media (max-width: $tablet) {
+            top: 208px;
+            left: -26px;
+          }
         }
         &:last-of-type {
           width: 253px;
@@ -177,20 +358,45 @@ section {
     }
     & h2 {
       margin-bottom: 48px;
+      @media (max-width: $laptop) {
+        margin-bottom: 30px;
+      }
     }
   }
 }
 
 .section-four {
   position: relative;
-  & > img {
+  &__img {
     position: absolute;
     left: 0;
     bottom: -50%;
+    background-image: url("@img/smoke.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: $laptop) {
+    .img-tablet {
+      display: none;
+    }
+  }
+  .img-laptop {
+    display: none;
+    @media (max-width: $laptop) {
+      display: block;
+    }
   }
   &__items {
     display: flex;
     position: relative;
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+      padding-bottom: 266px;
+    }
+    @media screen and (max-width: $L-mobile) {
+      padding-bottom: 200px;
+    }
     & img {
       border-radius: 6px;
       max-width: 793px;
@@ -209,12 +415,27 @@ section {
       border-radius: 6px;
       color: #a1a1a1;
       align-self: center;
+      @media (max-width: $laptop) {
+        max-width: 360px;
+        padding: 26px 14px 26px 32px;
+        gap: 34px;
+      }
+      @media screen and (max-width: $tablet) {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 0;
+        max-width: 537px;
+      }
+
       & li {
         display: flex;
         gap: 23px;
         align-items: center;
-        margin: 20px 0;
+        margin: 14px 0;
         color: $graphite;
+        &:first-child {
+          margin-top: 0;
+        }
         &:last-child {
           margin: 0;
         }
@@ -229,9 +450,12 @@ section {
 
 .section-five {
   &__description {
-    margin-bottom: 110px;
+    margin-bottom: 125px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: $laptop) {
+      margin-bottom: 96px;
+    }
     &-text {
       max-width: 590px;
       & h2 {
@@ -239,7 +463,11 @@ section {
       }
     }
     &-stickers {
+      position: relative;
       & table {
+        position: absolute;
+        top: -15px;
+        right: -15px;
         border-spacing: 16px;
         empty-cells: show;
         & span {
@@ -258,12 +486,23 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    @media (max-width: $laptop) {
+      flex-wrap: wrap;
+      row-gap: 64px;
+      column-gap: 14px;
+    }
+    @media (max-width: $tablet) {
+      row-gap: 81px;
+      column-gap: 70px;
+    }
     &-card {
       position: relative;
       border-radius: 6px;
       background-color: $light-yellow;
       padding: 70px 12px 40px;
       text-align: center;
+      max-width: 418px;
+      width: 100%;
       & span {
         position: absolute;
         right: 50%;
@@ -281,12 +520,35 @@ section {
           margin: 0 auto;
           object-fit: cover;
         }
+        & h3 > br {
+          display: none;
+          @media (max-width: $laptop) {
+            display: block;
+          }
+        }
       }
       & p {
         margin-top: 15px;
         font-size: 16px;
         line-height: 24px;
         color: $graphite;
+        @media (max-width: $laptop) {
+          margin-top: 30px;
+        }
+      }
+      @media (max-width: $desktop) {
+        width: 285px;
+      }
+      @media (max-width: $laptop) {
+        width: 418px;
+      }
+      @media (max-width: $tablet) {
+        width: 285px;
+      }
+      @media (max-width: $L-mobile) {
+        max-width: 490px;
+        width: 100%;
+        padding: 70px 22px 26px;
       }
     }
   }
@@ -294,13 +556,20 @@ section {
 
 .section-six {
   &__items {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    background-image: url("@img/new-flames.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 12px;
+    overflow: hidden;
     &-info {
       padding: 54px 0 36px;
+      margin-left: 67px;
       max-width: 448px;
-      border: 1px solid $white;
-      border-right: none;
+      // border: 1px solid $white;
+      // border-right: none;
       & h3 {
         color: $yellow;
       }

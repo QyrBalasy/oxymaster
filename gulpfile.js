@@ -42,13 +42,19 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основные задачи
 const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
+const mainTasksBuild = gulp.series(
+  fonts,
+  gulp.parallel(copy, html, scss, js, images, svgSpriteTask)
+);
 
 //Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
-const build = gulp.series(reset, mainTasks);
+// const build = gulp.series(reset, mainTasks);
+const build = gulp.series(reset, mainTasksBuild);
+
 const deployZIP = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
-const deployGh = gulp.series(reset, mainTasks, buildGhP);
+const deployGh = gulp.series(reset, mainTasksBuild, buildGhP);
 
 export { svgSpriteTask };
 export { dev };

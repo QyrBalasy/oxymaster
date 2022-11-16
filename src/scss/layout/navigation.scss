@@ -3,14 +3,20 @@
   justify-content: space-between;
   gap: 70px;
   align-items: center;
-  &-item a{
+  &-item a {
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
     color: $white;
-    transition: all ease-in 0.2s ;
-    &:hover{
+    transition: all ease-in 0.2s;
+    &:hover {
       color: $dark-orange-click;
     }
-  } 
+  }
+  @media (max-width: $laptop) {
+    gap: 80px;
+    & li:nth-child(4) {
+      display: none;
+    }
+  }
 }
