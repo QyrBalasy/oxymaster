@@ -40,7 +40,7 @@ section {
     }
     &-info {
       display: flex;
-      gap: 22px;
+      gap: 48px;
       & span {
         display: flex;
         align-items: center;
@@ -58,32 +58,37 @@ section {
   position: relative;
   & > svg {
     position: absolute;
-    bottom: -135px;
-    left: -75px;
-    width: 340px;
-    height: 318px;
+    bottom: -115px;
+    left: -30px;
+    width: 330px;
+    height: 330px;
     opacity: 0.8;
     z-index: -1;
   }
   &__items {
     display: flex;
-    justify-content: space-between;
-    gap: 100px;
+    justify-content: flex-start;
+    gap: 85px;
     &-description {
       display: flex;
       flex-direction: column;
       row-gap: 53px;
+      max-width: 692px;
     }
     &-table {
       display: grid;
-      grid-template-columns: repeat(2, minmax(170px, 1fr));
-      row-gap: 50px;
-      column-gap: 70px;
+      grid-template-columns: repeat(2, minmax(165px, 1fr));
+      row-gap: 62px;
+      column-gap: 30px;
+      align-items: center;
+      justify-items: start;
       & span {
         text-align: center;
         display: flex;
         align-items: center;
         flex-direction: column;
+        max-width: 163px;
+        width: 100%;
         & p {
           font-size: 16px;
           line-height: 24px;
@@ -117,6 +122,9 @@ section {
       & > div:first-child {
         max-width: 467px;
         flex-basis: 50%;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
       }
     }
     &-info {
@@ -150,13 +158,14 @@ section {
         }
         &:nth-of-type(1) {
           right: 0;
-          top: -25px;
+          top: -37px;
         }
         &:nth-of-type(3) {
-          bottom: 90px;
+          bottom: 85px;
+          left: 10px;
         }
         &:nth-of-type(2) {
-          top: 120px;
+          top: 130px;
         }
         &:last-of-type {
           width: 253px;
@@ -213,8 +222,11 @@ section {
         display: flex;
         gap: 23px;
         align-items: center;
-        margin: 20px 0;
+        margin: 14px 0;
         color: $graphite;
+        &:first-child {
+          margin-top: 0;
+        }
         &:last-child {
           margin: 0;
         }
@@ -229,7 +241,7 @@ section {
 
 .section-five {
   &__description {
-    margin-bottom: 110px;
+    margin-bottom: 125px;
     display: flex;
     justify-content: space-between;
     &-text {
@@ -239,7 +251,11 @@ section {
       }
     }
     &-stickers {
+      position: relative;
       & table {
+        position: absolute;
+        top: -15px;
+        right: -15px;
         border-spacing: 16px;
         empty-cells: show;
         & span {
@@ -264,6 +280,8 @@ section {
       background-color: $light-yellow;
       padding: 70px 12px 40px;
       text-align: center;
+      max-width: 285px;
+      width: 100%;
       & span {
         position: absolute;
         right: 50%;
@@ -296,7 +314,7 @@ section {
   &__items {
     // display: flex;
     // justify-content: space-between;
-    background-image: url('@img/new-flames.png');
+    background-image: url("@img/new-flames.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;

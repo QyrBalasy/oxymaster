@@ -3,25 +3,32 @@
   &-items {
     display: flex;
     justify-content: space-between;
-    &__logo svg {
-      width: 170px;
-      height: 30px;
+    &__logo {
+      flex-basis: 33%;
+      & svg {
+        width: 170px;
+        height: 30px;
+      }
     }
-    &__navigation ul {
-      display: flex;
-      flex-direction: column;
-      gap: 29px;
-      & a {
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 400;
-        color: $white;
-        transition: all ease-in 0.2s;
-        &:hover {
-          color: $dark-orange-click;
+    &__navigation {
+      flex-basis: 33%;
+      & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        & a {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 400;
+          color: $white;
+          transition: all ease-in 0.2s;
+          &:hover {
+            color: $dark-orange-click;
+          }
         }
       }
     }
+
     &__links {
       & a {
         font-size: 20px;
