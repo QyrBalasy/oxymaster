@@ -1,6 +1,9 @@
 .header {
   position: relative;
   padding: 26px 0;
+  @media (max-width: $L-mobile) {
+      padding: 14px 0;
+    }
   .header-elements {
     display: flex;
     justify-content: space-between;

@@ -11,7 +11,9 @@ section {
   }
   @media (max-width: $tablet) {
     margin: 129px 0;
-    // margin: 277px 0;
+  }
+  @media (max-width: $L-mobile) {
+    margin: 68px 0;
   }
 }
 
@@ -33,6 +35,9 @@ section {
       rgb(26, 26, 26)
     );
     z-index: 5;
+    @media (max-width: $L-mobile) {
+      height: 25px;
+    }
   }
   @media (max-width: $laptop) {
     background-position: right center;
@@ -56,6 +61,9 @@ section {
       @media (max-width: $tablet) {
         padding-bottom: 10px;
       }
+      @media (max-width: $L-mobile) {
+        padding-bottom: 0;
+      }
     }
     &-info {
       display: flex;
@@ -66,6 +74,10 @@ section {
       @media (max-width: $tablet) {
         flex-direction: column;
         row-gap: 30px;
+      }
+      @media (max-width: $L-mobile) {
+        align-items: center;
+        padding-top: 16px;
       }
 
       & span {
@@ -91,6 +103,12 @@ section {
       row-gap: 50px;
     }
   }
+  @media (max-width: $L-mobile) {
+    padding: 20px 0 29px;
+    &__items {
+      row-gap: 28px;
+    }
+  }
 }
 
 .section-two {
@@ -113,6 +131,9 @@ section {
     @media (max-width: $tablet) {
       bottom: 30%;
       left: -40px;
+    }
+    @media (max-width: $L-mobile) {
+      left: -110px;
     }
   }
   &__items {
@@ -142,6 +163,12 @@ section {
         grid-template-columns: repeat(3, minmax(auto, 1fr));
         justify-items: center;
       }
+      @media (max-width: $laptop) {
+        row-gap: 30px;
+      }
+      @media (max-width: $mobile) {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+      }
 
       & span {
         text-align: center;
@@ -163,6 +190,9 @@ section {
       @media (max-width: $laptop) {
         padding-top: 85px;
         column-gap: 0px;
+      }
+      @media (max-width: $laptop) {
+        padding-top: 45px;
       }
     }
     @media (max-width: $laptop) {
@@ -187,6 +217,9 @@ section {
     @media (max-width: $tablet) {
       padding: 54px 34px 0px 66px;
     }
+    @media (max-width: $L-mobile) {
+      padding: 48px 25px 0px 24px;
+    }
     & > svg:first-of-type {
       width: 64px;
       height: 62px;
@@ -195,6 +228,12 @@ section {
       @media (max-width: $laptop) {
         width: 45px;
         height: 43px;
+      }
+      @media (max-width: $L-mobile) {
+        width: 22px;
+        height: 22px;
+        top: 10px;
+        left: 13px;
       }
     }
     & h2 > br {
@@ -224,6 +263,10 @@ section {
         @media (max-width: $tablet) {
           width: 531px;
           // padding-bottom: 140px;
+        }
+        @media (max-width: $L-mobile) {
+          max-width: 450px;
+          width: 100%;
         }
       }
     }
@@ -346,6 +389,9 @@ section {
     @media screen and (max-width: $tablet) {
       flex-direction: column;
       padding-bottom: 266px;
+    }
+    @media screen and (max-width: $L-mobile) {
+      padding-bottom: 200px;
     }
     & img {
       border-radius: 6px;
@@ -494,6 +540,11 @@ section {
       }
       @media (max-width: $tablet) {
         width: 285px;
+      }
+      @media (max-width: $L-mobile) {
+        max-width: 490px;
+        width: 100%;
+        padding: 70px 22px 26px;
       }
     }
   }

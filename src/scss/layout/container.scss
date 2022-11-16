@@ -11,6 +11,10 @@
   @media (max-width: $tablet) {
       max-width: 640px;  
   }
+  @media (max-width: $L-mobile) {
+      max-width: 500px;
+      padding: 0 5px;  
+  }
   @media (max-width: $mobile) {
       max-width: 360px;
   }
