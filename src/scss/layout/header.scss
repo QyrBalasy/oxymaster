@@ -32,12 +32,9 @@
 
     &__menu {
     }
+    @media (max-width: $laptop) {
+      justify-content: flex-start;
+      gap: 60px;
+    }
   }
-
-  // @media (max-width: $desktop) {
-  // }
-  // @media (max-width: $tablet) {
-  // }
-  // @media (max-width: $mobile) {
-  // }
 }

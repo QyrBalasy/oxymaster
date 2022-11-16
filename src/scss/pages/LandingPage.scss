@@ -3,6 +3,12 @@ section {
   &:last-child {
     margin: 0;
   }
+  @media (max-width: $laptop) {
+    margin: 145px 0;
+    &:first-child {
+      margin-top: 31px;
+    }
+  }
 }
 
 .slogan {
@@ -52,6 +58,12 @@ section {
       }
     }
   }
+  @media (max-width: $laptop) {
+    padding: 52px 0 114px;
+    &__items {
+      row-gap: 64px;
+    }
+  }
 }
 
 .section-two {
@@ -64,6 +76,13 @@ section {
     height: 330px;
     opacity: 0.8;
     z-index: -1;
+
+    @media (max-width: $laptop) {
+      bottom: -137px;
+      width: 262px;
+      height: 254px;
+      left: -17px;
+    }
   }
   &__items {
     display: flex;
@@ -99,6 +118,13 @@ section {
           height: 48px;
         }
       }
+      @media (max-width: $laptop) {
+        padding-top: 85px;
+        column-gap: 0px;
+      }
+    }
+    @media (max-width: $laptop) {
+      gap: 0;
     }
   }
 }
@@ -110,12 +136,26 @@ section {
     padding: 59px 21px 0px 101px;
     position: relative;
     overflow: hidden;
+    @media (max-width: $laptop) {
+      padding: 54px 17px 0px 72px;
+    }
     & > svg:first-of-type {
       width: 64px;
       height: 62px;
       position: absolute;
       left: 17px;
+      @media (max-width: $laptop) {
+        width: 45px;
+        height: 43px;
+      }
     }
+    & h2 > br {
+      display: none;
+      @media (max-width: $laptop) {
+        display: block;
+      }
+    }
+
     &-wrapper {
       display: flex;
       gap: 74px;
@@ -125,6 +165,10 @@ section {
         gap: 30px;
         display: flex;
         flex-direction: column;
+        @media (max-width: $laptop) {
+          padding-bottom: 50px;
+          gap: 35px;
+        }
       }
     }
     &-info {
@@ -135,6 +179,11 @@ section {
         margin: 0 auto;
         z-index: 3;
         // position: relative;
+        @media (max-width: $laptop) {
+          object-fit: contain;
+          max-width: 201px;
+          align-self: end;
+        }
       }
       & > span {
         position: absolute;
@@ -159,13 +208,26 @@ section {
         &:nth-of-type(1) {
           right: 0;
           top: -37px;
+          @media (max-width: $laptop) {
+            top: 20px;
+          }
         }
         &:nth-of-type(3) {
           bottom: 85px;
           left: 10px;
+          @media (max-width: $laptop) {
+            bottom: 75px;
+            left: -30px;
+            z-index: 3;
+          }
         }
         &:nth-of-type(2) {
           top: 130px;
+          @media (max-width: $laptop) {
+            top: 270px;
+            left: -41px;
+            z-index: 3;
+          }
         }
         &:last-of-type {
           width: 253px;
@@ -186,6 +248,9 @@ section {
     }
     & h2 {
       margin-bottom: 48px;
+      @media (max-width: $laptop) {
+        margin-bottom: 30px;
+      }
     }
   }
 }
@@ -196,6 +261,17 @@ section {
     position: absolute;
     left: 0;
     bottom: -50%;
+  }
+  @media (max-width: $laptop) {
+    .img-tablet {
+      display: none;
+    }
+  }
+  .img-laptop {
+    display: none;
+    @media (max-width: $laptop) {
+      display: block;
+    }
   }
   &__items {
     display: flex;
@@ -218,6 +294,12 @@ section {
       border-radius: 6px;
       color: #a1a1a1;
       align-self: center;
+      @media (max-width: $laptop) {
+        max-width: 360px;
+        padding: 26px 14px 26px 32px;
+        gap: 34px;
+      }
+
       & li {
         display: flex;
         gap: 23px;
@@ -274,13 +356,18 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    @media (max-width: $laptop) {
+      flex-wrap: wrap;
+      row-gap: 64px;
+      column-gap: 14px;
+    }
     &-card {
       position: relative;
       border-radius: 6px;
       background-color: $light-yellow;
       padding: 70px 12px 40px;
       text-align: center;
-      max-width: 285px;
+      max-width: 418px;
       width: 100%;
       & span {
         position: absolute;
@@ -299,12 +386,24 @@ section {
           margin: 0 auto;
           object-fit: cover;
         }
+        & h3 > br {
+          display: none;
+          @media (max-width: $laptop) {
+            display: block;
+          }
+        }
       }
       & p {
         margin-top: 15px;
         font-size: 16px;
         line-height: 24px;
         color: $graphite;
+      }
+      @media (max-width: $desktop) {
+        width: 285px;
+      }
+      @media (max-width: $laptop) {
+        width: 418px;
       }
     }
   }
@@ -317,7 +416,9 @@ section {
     background-image: url("@img/new-flames.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
+    border-radius: 12px;
+    overflow: hidden;
     &-info {
       padding: 54px 0 36px;
       margin-left: 67px;
