@@ -2,8 +2,8 @@
   position: relative;
   padding: 26px 0;
   @media (max-width: $L-mobile) {
-      padding: 14px 0;
-    }
+    padding: 14px 0;
+  }
   .header-elements {
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,48 @@
     @media (max-width: $tablet) {
       justify-content: space-between;
       &__menu {
-        display: none;
+        visibility: hidden;
+        position: fixed;
+        max-width: 638px;
+        width: 100%;
+        padding: 50px 40px;
+        background-color: $graphite;
+        border-radius: 12px;
+        top: 0;
+        z-index: 5;
+        right: -1000px;
+        transition: all ease .5s;
+      }
+      &__menu.overlay {
+        visibility: visible;
+        right: 0;
+        // width: 346px;
+        // padding: 50px 40px;
+        // background-color: $graphite;
+      }
+    }
+    @media (max-width: $L-mobile) {
+      &__menu {
+        max-width: 450px;
+        width: 100%;
+        top: 0;
+        transition: all ease .5s;
+      }
+      &__menu.overlay {
+        visibility: visible;
+        right: 0;
+      }
+    }
+    @media (max-width: $mobile) {
+      &__menu {
+        max-width: 346px;
+        width: 100%;
+        top: 0;
+        transition: all ease .5s;
+      }
+      &__menu.overlay {
+        visibility: visible;
+        right: 0;
       }
     }
   }

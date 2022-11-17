@@ -12,11 +12,25 @@
     &:hover {
       color: $dark-orange-click;
     }
+    & svg {
+      width: 171px;
+      height: 30px;
+    }
   }
   @media (max-width: $laptop) {
     gap: 80px;
     & li:nth-child(4) {
       display: none;
+    }
+  }
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    gap: 26px;
+    align-items: start;
+    &-item a {
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: 700;
     }
   }
 }

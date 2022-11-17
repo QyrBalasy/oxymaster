@@ -1,18 +1,23 @@
 import * as flsFunctions from "./modules/functions.js";
 import * as accordion from "./modules/accordion.js";
 import * as phoneInput from "./modules/phoneinput.js";
-import * as mymodal from './modules/modal.js';
+import * as mymodal from "./modules/modal.js";
+import * as burger from "./modules/burger.js";
+import { smoothScroll } from "./modules/burger.js";
 
 flsFunctions.isWebp();
 accordion.showContent();
 phoneInput.isPhone();
 mymodal.modal();
+burger.burgerMenuCustom();
+smoothScroll();
 
 // плагины через npm устанавливаешь и модули вызываешь
 import Swiper, { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 const swiper = new Swiper(".swiper", {
   modules: [Navigation, Pagination],
   // Optional parameters

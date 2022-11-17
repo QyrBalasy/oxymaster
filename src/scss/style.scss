@@ -36,6 +36,9 @@ body {
   font-weight: 400;
   color: $white;
   background-color: $bg-color;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 p {
