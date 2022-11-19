@@ -17,6 +17,10 @@
       svg {
         width: 175px;
         height: 30px;
+        @media (max-width: $mobile) {
+          width: 108px;
+          height: 19px;
+        }
       }
     }
 
@@ -38,7 +42,7 @@
         top: 0;
         z-index: 5;
         right: -1000px;
-        transition: all ease .5s;
+        transition: all ease 0.5s;
       }
       &__menu.overlay {
         visibility: visible;
@@ -53,7 +57,7 @@
         max-width: 450px;
         width: 100%;
         top: 0;
-        transition: all ease .5s;
+        transition: all ease 0.5s;
       }
       &__menu.overlay {
         visibility: visible;
@@ -65,7 +69,7 @@
         max-width: 346px;
         width: 100%;
         top: 0;
-        transition: all ease .5s;
+        transition: all ease 0.5s;
       }
       &__menu.overlay {
         visibility: visible;

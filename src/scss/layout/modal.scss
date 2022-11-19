@@ -23,6 +23,20 @@
     max-width: 646px;
     border-radius: 0.5rem;
     z-index: 15;
+    @media (max-width: $tablet) {
+      padding: 50px 44px 50px 50px;
+      max-width: 594px;
+      width: 100%;
+    }
+    @media (max-width: $L-mobile) {
+      padding: 40px 27px 38px 30px;
+      max-width: 346px;
+      & h3 {
+        font-size: 28px;
+        line-height: 34px;
+        padding-right: 40px;
+      }
+    }
   }
   form {
     margin-top: 29px;
@@ -30,6 +44,9 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
+    @media (max-width: $tablet) {
+     margin-top: 18px;
+    }
     & .input-wrapper {
       display: flex;
       flex-direction: column;
@@ -44,9 +61,10 @@
 
 .close-button {
   position: absolute;
-  right: 45px;
+  right: 25px;
   top: 30px;
   height: 20px;
+  width: 30px;
   opacity: 0.2;
   cursor: pointer;
   transition: opacity ease 0.5s;
@@ -59,9 +77,9 @@
     position: absolute;
     top: 10px;
     display: block;
-    width: 20px;
+    width: 30px;
     height: 3px;
-    background: #000;
+    background: $black;
   }
   &::before {
     transform: rotate(45deg);
