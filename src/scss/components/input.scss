@@ -60,4 +60,9 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
+  &.error {
+    border: 1px solid red;
+  }
 }
+
+

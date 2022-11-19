@@ -1,7 +1,5 @@
 export function isPhone() {
-  // console.log('hello');
   let phoneInputs = document.querySelectorAll("input[data-tel-input]");
-  // console.log(phoneInputs);
   let getInputNumbersValue = function (input) {
     return input.value.replace(/\D/g, "");
   };
@@ -14,14 +12,12 @@ export function isPhone() {
       return (input.value = "");
     }
     if (input.value.length != selectionStart) {
-      console.log("редактирование в середине строки", e);
       if (e.data && /\D/g.test(e.data)) {
         input.value = inputNumbersValue;
       }
       return;
     }
     if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
-      // Russian phone number
       if (inputNumbersValue[0] == "9") {
         inputNumbersValue = "7" + inputNumbersValue;
       }
@@ -40,15 +36,12 @@ export function isPhone() {
         formattedInputValue += "-" + inputNumbersValue.substring(9, 11);
       }
     } else {
-      //other type number
       formattedInputValue = "+" + inputNumbersValue.substring(0, 16);
     }
     input.value = formattedInputValue;
-    // console.log("inputValue", inputNumbersValue);
   };
 
   let onPhoneKeyDown = function (e) {
-    // console.log(e.keyCode, e.target.value);
     let input = e.target;
     if (e.keyCode == 8 && getInputNumbersValue(input).length == 1) {
       input.value = "";

@@ -296,29 +296,32 @@
       <div class="modal-content">
         <span class="close-button"></span>
         <h3>Оставьте заявку, и вам перезвонят в скором времени</h3>
-        <form method="post">
+        <form class="modal-form" action="send_mail.php" name="form" method="POST">
           <div class="input-wrapper">
             <label for="name">Имя</label>
             <input
               type="text"
               id="name"
-              name="user_name"
+              name="name"
               placeholder="Ваше имя"
               maxlength="30"
-              class="input"
+              data-reg="^[А-ЯЁ][а-яё]*$"
+              class="input input-name"
             />
           </div>
           <div class="input-wrapper">
-            <label for="name">Номер телефона</label>
+            <label for="phone">Номер телефона</label>
             <input
               type="tel"
+              name="phone"
+              id="phone"
               data-tel-input
               placeholder="Введите телефон"
               maxlength="18"
-              class="input"
+              class="input input-phone"
             />
           </div>
-          <button type="submit" class="modal-button">Оставить заявку</button>
+          <input type="submit" id="button" class="modal-button" value="Оставить заявку" >
         </form>
       </div>
     </div>

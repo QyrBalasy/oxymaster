@@ -15,7 +15,6 @@ export function smoothScroll() {
     ".menu__list-item__link[data-goto]"
   );
   if (menuLinks.length > 0) {
-    console.log(menuLinks);
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener("click", onMenuLinkClick);
     });
