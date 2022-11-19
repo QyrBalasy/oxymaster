@@ -52,7 +52,7 @@ const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 // const build = gulp.series(reset, mainTasks);
 const build = gulp.series(reset, mainTasksBuild);
 
-const deployZIP = gulp.series(reset, mainTasks, zip);
+const deployZIP = gulp.series(reset, mainTasksBuild, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
 const deployGh = gulp.series(reset, mainTasksBuild, buildGhP);
 
