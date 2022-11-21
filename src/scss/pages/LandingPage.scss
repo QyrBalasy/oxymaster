@@ -576,46 +576,7 @@ section {
 }
 
 .section-six {
-  // &__items {
-  //   // display: flex;
-  //   // justify-content: space-between;
-  //   background-image: url("@img/new-flames.png");
-  //   background-repeat: no-repeat;
-  //   background-position: center center;
-  //   background-size: cover;
-  //   border-radius: 12px;
-  //   overflow: hidden;
-  //   &-info {
-  //     padding: 54px 0 36px;
-  //     margin-left: 67px;
-  //     max-width: 448px;
-  //     // border: 1px solid $white;
-  //     // border-right: none;
-  //     & h3 {
-  //       color: $yellow;
-  //     }
-  //     & p {
-  //       padding: 31px 0 42px;
-  //     }
-  //     & ul {
-  //       & li {
-  //         display: flex;
-  //         align-items: center;
-  //         gap: 26px;
-  //         margin-bottom: 26px;
-  //         & svg {
-  //           width: 41px;
-  //           height: 41px;
-  //         }
-  //         & a {
-  //           color: $white;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
   &__items {
-    // display: flex;
     background-image: url("@img/new-flames.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -624,8 +585,6 @@ section {
       min-height: 480px;
     }
     &-info {
-      // display: flex;
-      // align-items: center;
       width: calc($pseudo-container-width * 55 / 100 + $pseudo-container-gap);
       clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
       background-color: $graphite;
@@ -684,6 +643,9 @@ section {
           }
           & p {
             padding: 31px 0 42px;
+            @media (max-width: $L-mobile) {
+              padding: 30px 0;
+            }
           }
           & ul {
             & li {
@@ -691,9 +653,20 @@ section {
               align-items: center;
               gap: 26px;
               margin-bottom: 26px;
+              @media (max-width: $tablet) {
+                gap: 22px;
+              }
               & svg {
                 width: 41px;
                 height: 41px;
+                @media (max-width: $tablet) {
+                  width: 24px;
+                  height: 24px;
+                }
+                @media (max-width: $L-mobile) {
+                  width: 20px;
+                  height: 20px;
+                }
               }
               & a {
                 color: $white;
