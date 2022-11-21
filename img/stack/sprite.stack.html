@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-24-7-icon-dims { width: 40px; height: 41px; }
+ .svg-Agriculture-dims { width: 48px; height: 48px; }
+ .svg-LOGO-dims { width: 171px; height: 30px; }
+ .svg-Metallurgy-dims { width: 48px; height: 48px; }
+ .svg-Mining-icon-dims { width: 48px; height: 48px; }
+ .svg-check-dims { width: 24px; height: 24px; }
+ .svg-construction-dims { width: 48px; height: 48px; }
+ .svg-delivery-dims { width: 60px; height: 60px; }
+ .svg-energy-icon-dims { width: 48px; height: 48px; }
+ .svg-gas-cylinder-dims { width: 60px; height: 60px; }
+ .svg-instagram-dims { width: 33px; height: 34px; }
+ .svg-logo-notext-dims { width: 64px; height: 62px; }
+ .svg-logo-notext-wrapper-dims { width: 274px; height: 338px; }
+ .svg-mail-dims { width: 41px; height: 30px; }
+ .svg-petroleum-icon-dims { width: 48px; height: 48px; }
+ .svg-phone-dims { width: 41px; height: 41px; }
+ .svg-settings-dims { width: 60px; height: 60px; }
+ .svg-telegram-dims { width: 33px; height: 33px; }
+ .svg-whatsapp-dims { width: 33px; height: 34px; }
+ .svg-wholesale-dims { width: 60px; height: 60px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="24-7-icon">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#24-7-icon" class="svg-24-7-icon-dims" alt="24-7-icon">
+                    </div>
+                    <h2>24-7-icon, </h2>
+                </li>
+             <li title="Agriculture">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#Agriculture" class="svg-Agriculture-dims" alt="Agriculture">
+                    </div>
+                    <h2>Agriculture, </h2>
+                </li>
+             <li title="LOGO">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#LOGO" class="svg-LOGO-dims" alt="LOGO">
+                    </div>
+                    <h2>LOGO, </h2>
+                </li>
+             <li title="Metallurgy">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#Metallurgy" class="svg-Metallurgy-dims" alt="Metallurgy">
+                    </div>
+                    <h2>Metallurgy, </h2>
+                </li>
+             <li title="Mining-icon">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#Mining-icon" class="svg-Mining-icon-dims" alt="Mining-icon">
+                    </div>
+                    <h2>Mining-icon, </h2>
+                </li>
+             <li title="check">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#check" class="svg-check-dims" alt="check">
+                    </div>
+                    <h2>check, </h2>
+                </li>
+             <li title="construction">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#construction" class="svg-construction-dims" alt="construction">
+                    </div>
+                    <h2>construction, </h2>
+                </li>
+             <li title="delivery">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#delivery" class="svg-delivery-dims" alt="delivery">
+                    </div>
+                    <h2>delivery, </h2>
+                </li>
+             <li title="energy-icon">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#energy-icon" class="svg-energy-icon-dims" alt="energy-icon">
+                    </div>
+                    <h2>energy-icon, </h2>
+                </li>
+             <li title="gas-cylinder">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#gas-cylinder" class="svg-gas-cylinder-dims" alt="gas-cylinder">
+                    </div>
+                    <h2>gas-cylinder, </h2>
+                </li>
+             <li title="instagram">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#instagram" class="svg-instagram-dims" alt="instagram">
+                    </div>
+                    <h2>instagram, </h2>
+                </li>
+             <li title="logo-notext">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#logo-notext" class="svg-logo-notext-dims" alt="logo-notext">
+                    </div>
+                    <h2>logo-notext, </h2>
+                </li>
+             <li title="logo-notext-wrapper">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#logo-notext-wrapper" class="svg-logo-notext-wrapper-dims" alt="logo-notext-wrapper">
+                    </div>
+                    <h2>logo-notext-wrapper, </h2>
+                </li>
+             <li title="mail">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#mail" class="svg-mail-dims" alt="mail">
+                    </div>
+                    <h2>mail, </h2>
+                </li>
+             <li title="petroleum-icon">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#petroleum-icon" class="svg-petroleum-icon-dims" alt="petroleum-icon">
+                    </div>
+                    <h2>petroleum-icon, </h2>
+                </li>
+             <li title="phone">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#phone" class="svg-phone-dims" alt="phone">
+                    </div>
+                    <h2>phone, </h2>
+                </li>
+             <li title="settings">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#settings" class="svg-settings-dims" alt="settings">
+                    </div>
+                    <h2>settings, </h2>
+                </li>
+             <li title="telegram">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#telegram" class="svg-telegram-dims" alt="telegram">
+                    </div>
+                    <h2>telegram, </h2>
+                </li>
+             <li title="whatsapp">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#whatsapp" class="svg-whatsapp-dims" alt="whatsapp">
+                    </div>
+                    <h2>whatsapp, </h2>
+                </li>
+             <li title="wholesale">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#wholesale" class="svg-wholesale-dims" alt="wholesale">
+                    </div>
+                    <h2>wholesale, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Mon, 21 Nov 2022 07:51:39 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>

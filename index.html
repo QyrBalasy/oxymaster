@@ -1,9 +1,96 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', { "title": "oxymaster - кислород в баллонах" })
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:;base64,=">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css?_v=20221121135145"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="css/style.min.css?_v=20221121135145" />
+  <title>oxymaster - кислород в баллонах</title>
+</head>
+
   <body>
     <div class="slogan">
-      @@include('html/header.html', {}) @@include('html/slogan.html', {})
+      <header class="header">
+  <div class="container">
+    <div class="header-elements">
+      <div class="header-elements__logo">
+        <a href="#">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#LOGO"></use>
+          </svg>
+        </a>
+      </div>
+      <div id="burger-menu">
+        <span></span>
+      </div>
+      <nav class="header-elements__menu" id="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a href="#">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#LOGO"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu__list-item">
+            <a data-goto="#aboutUs" href="#" class="menu__list-item__link"
+              >О нас</a
+            >
+          </li>
+          <li class="menu__list-item">
+            <a data-goto="#advantages" href="#" class="menu__list-item__link"
+              >Преимущества</a
+            >
+          </li>
+          <li class="menu__list-item">
+            <a data-goto="#services" href="#" class="menu__list-item__link"
+              >Услуги</a
+            >
+          </li>
+          <li class="menu__list-item">
+            <a href="tel:+77771234567">+7 777 123 45 67</a>
+          </li>
+          <li class="menu__list-item">
+            <button type="submit" class="main-button trigger">Заказать</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+ <div class="section-one">
+  <div class="container">
+    <div class="section-one__items">
+      <h1>
+        Круглосуточная доставка
+        <span style="color: #fccd46"> кислорода </span> по Алматы и области
+      </h1>
+      <p>
+        Производим кислород высокого качества в баллонах на различные
+        промышленные и коммерческие объекты, строительные площадки и в дома
+        частного сектора.
+      </p>
+      <div class="section-one__items-info">
+        <button class="main-button trigger" style="padding: 14px 36px; font-size: 24px; line-height: 30px;">Сделать заказ</button>
+        <span>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#24-7-icon"></use>
+          </svg>
+          <p>Поддержка 24/7</p>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
       <span class="slogan-blur"></span>
     </div>
     <main>
@@ -15,7 +102,7 @@
             </filter>
           </defs>
           <use
-            xlink:href="@img/icons/icons.svg#logo-notext-wrapper"
+            xlink:href="img/icons/icons.svg#logo-notext-wrapper"
             filter="url(#blur)"
           ></use>
         </svg>
@@ -39,37 +126,37 @@
             <div class="section-two__items-table">
               <span>
                 <svg>
-                  <use xlink:href="@img/icons/icons.svg#energy-icon"></use>
+                  <use xlink:href="img/icons/icons.svg#energy-icon"></use>
                 </svg>
                 <p>Энергетика</p>
               </span>
               <span>
                 <svg>
-                  <use xlink:href="@img/icons/icons.svg#Agriculture"></use>
+                  <use xlink:href="img/icons/icons.svg#Agriculture"></use>
                 </svg>
                 <p>Сельское хозяйство</p>
               </span>
               <span>
                 <svg>
-                  <use xlink:href="@img/icons/icons.svg#petroleum-icon"></use>
+                  <use xlink:href="img/icons/icons.svg#petroleum-icon"></use>
                 </svg>
                 <p>Нефтедобыча</p>
               </span>
               <span>
                 <svg>
-                  <use xlink:href="@img/icons/icons.svg#construction"></use>
+                  <use xlink:href="img/icons/icons.svg#construction"></use>
                 </svg>
                 <p>Строительство</p>
               </span>
               <span>
                 <svg>
-                  <use xlink:href="@img/icons/icons.svg#Metallurgy"></use>
+                  <use xlink:href="img/icons/icons.svg#Metallurgy"></use>
                 </svg>
                 <p>Металлургия</p>
               </span>
               <span>
                 <svg>
-                  <use xlink:href="@img/icons/icons.svg#Mining-icon"></use>
+                  <use xlink:href="img/icons/icons.svg#Mining-icon"></use>
                 </svg>
                 <p>Горнодобывающая промышленность</p>
               </span>
@@ -81,7 +168,7 @@
         <div class="container">
           <div class="section-three__items">
             <svg>
-              <use xlink:href="@img/icons/icons.svg#logo-notext"></use>
+              <use xlink:href="img/icons/icons.svg#logo-notext"></use>
             </svg>
             <h2>
               Кислород в баллонах <br />
@@ -104,19 +191,19 @@
               </div>
               <div class="section-three__items-info">
                 <img
-                  src="@img/gas-cylinder-info.png"
+                  src="img/gas-cylinder-info.png"
                   alt="gas cylinder image"
                 />
                 <span>
-                  <img src="@img/sertificates.png" alt="сертификаты" />
+                  <picture><source srcset="img/sertificates.webp" type="image/webp"><img src="img/sertificates.png" alt="сертификаты" /></picture>
                   <p>Сертифицирован</p>
                 </span>
                 <span>
-                  <img src="@img/qualitative.png" alt="Качественный" />
+                  <picture><source srcset="img/qualitative.webp" type="image/webp"><img src="img/qualitative.png" alt="Качественный" /></picture>
                   <p>Качественный</p>
                 </span>
                 <span>
-                  <img src="@img/no-chemicals.png" alt="Без примесей" />
+                  <picture><source srcset="img/no-chemicals.webp" type="image/webp"><img src="img/no-chemicals.png" alt="Без примесей" /></picture>
                   <p>Без примесей</p>
                 </span>
                 <span></span>
@@ -130,39 +217,39 @@
         <div class="container">
           <div class="section-four__items">
             <div>
-              <img src="@img/photo-adv.png" alt="" class="img-tablet" />
-              <img src="@img/photo-adv-laptop.png" alt="" class="img-laptop" />
+              <picture><source srcset="img/photo-adv.webp" type="image/webp"><img src="img/photo-adv.png" alt="" class="img-tablet" /></picture>
+              <picture><source srcset="img/photo-adv-laptop.webp" type="image/webp"><img src="img/photo-adv-laptop.png" alt="" class="img-laptop" /></picture>
             </div>
             <div class="section-four__items-description" id="advantages">
               <h3>Наши преимущества:</h3>
               <ul>
                 <li>
                   <svg>
-                    <use xlink:href="@img/icons/icons.svg#check"></use>
+                    <use xlink:href="img/icons/icons.svg#check"></use>
                   </svg>
                   <p>Собственное производство</p>
                 </li>
                 <li>
                   <svg>
-                    <use xlink:href="@img/icons/icons.svg#check"></use>
+                    <use xlink:href="img/icons/icons.svg#check"></use>
                   </svg>
                   <p>Высокое качество кислорода</p>
                 </li>
                 <li>
                   <svg>
-                    <use xlink:href="@img/icons/icons.svg#check"></use>
+                    <use xlink:href="img/icons/icons.svg#check"></use>
                   </svg>
                   <p>Гарантия безопасности</p>
                 </li>
                 <li>
                   <svg>
-                    <use xlink:href="@img/icons/icons.svg#check"></use>
+                    <use xlink:href="img/icons/icons.svg#check"></use>
                   </svg>
                   <p>Оперативная доставка</p>
                 </li>
                 <li>
                   <svg>
-                    <use xlink:href="@img/icons/icons.svg#check"></use>
+                    <use xlink:href="img/icons/icons.svg#check"></use>
                   </svg>
                   <p>Низкие цены</p>
                 </li>
@@ -208,7 +295,7 @@
             <div class="section-five__items-card">
               <span>
                 <img
-                  src="@img/icons/icons.svg#gas-cylinder"
+                  src="img/icons/icons.svg#gas-cylinder"
                   class="svg-settings-dims"
                   alt="Заправка баллонов"
                 />
@@ -225,7 +312,7 @@
             <div class="section-five__items-card">
               <span>
                 <img
-                  src="@img/icons/icons.svg#settings"
+                  src="img/icons/icons.svg#settings"
                   class="svg-settings-dims"
                   alt="settings"
                 />
@@ -236,7 +323,7 @@
             <div class="section-five__items-card">
               <span
                 ><img
-                  src="@img/icons/icons.svg#wholesale"
+                  src="img/icons/icons.svg#wholesale"
                   class="svg-settings-dims"
                   alt="settings"
               /></span>
@@ -249,7 +336,7 @@
             <div class="section-five__items-card">
               <span
                 ><img
-                  src="@img/icons/icons.svg#delivery"
+                  src="img/icons/icons.svg#delivery"
                   class="svg-settings-dims"
                   alt="settings"
               /></span>
@@ -276,13 +363,13 @@
                 <ul>
                   <li>
                     <svg>
-                      <use xlink:href="@img/icons/icons.svg#phone"></use>
+                      <use xlink:href="img/icons/icons.svg#phone"></use>
                     </svg>
                     <a href="tel:+77771234567">+7 707 123 45 67</a>
                   </li>
                   <li>
                     <svg>
-                      <use xlink:href="@img/icons/icons.svg#mail"></use>
+                      <use xlink:href="img/icons/icons.svg#mail"></use>
                     </svg>
                     <a href="mailto:info@oxymaster.com">info@oxymaster.com </a>
                   </li>
@@ -293,7 +380,46 @@
         </div>
       </section>
     </main>
-    @@include('html/footer.html', {})
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-items">
+      <div class="footer-items__logo">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#LOGO"></use>
+        </svg>
+        <p>Oxy Master | 2022</p>
+      </div>
+      <nav class="footer-items__navigation">
+        <ul>
+          <li><a href="#aboutUs">О нас</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#services">Услуги</a></li>
+        </ul>
+      </nav>
+      <div class="footer-items__links">
+        <a href="tel:+77771234567">+7 707 123 45 67</a>
+        <div class="footer-items__links-icons">
+          <a href="#">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#telegram"></use>
+            </svg>
+          </a>
+          <a href="#"
+            ><svg>
+              <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
     <div class="modal">
       <div class="modal-content">
         <span class="close-button"></span>
@@ -337,6 +463,6 @@
         </form>
       </div>
     </div>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.min.js?_v=20221121135145"></script>
   </body>
 </html>
