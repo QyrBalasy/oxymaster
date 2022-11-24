@@ -1,0 +1,118 @@
+.section-two {
+  &__items-description.element-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    &.element-show {
+      opacity: 1;
+      transition: all 1.5s;
+      transform: translateY(0%);
+    }
+  }
+  &__items-table.element-animation > span {
+    opacity: 0;
+    &:nth-of-type(odd) {
+      transform: translateX(-20px);
+    }
+    &:nth-of-type(even) {
+      transform: translateX(20px);
+    }
+  }
+  &__items-table.element-show span:nth-of-type(odd) {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateX(0%);
+  }
+  &__items-table.element-show span:nth-of-type(even) {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateX(0%);
+  }
+}
+
+.section-three {
+  &__items.element-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    &.element-show {
+      opacity: 1;
+      transition: all 1.5s;
+      transform: translateY(0%);
+    }
+    & svg {
+      transform: rotate(-45deg) scale(0.95);
+      transition: all 1.5s;
+    }
+    &.element-show svg {
+      transition-delay: 1s;
+      transform: rotate(0) scale(1);
+    }
+  }
+  &__items-info.element-animation > span {
+    opacity: 0;
+    transition: all 1.5s;
+  }
+  &__items-info.element-animation span:nth-of-type(odd) {
+    transform: translateX(20px);
+  }
+  &__items-info.element-animation span:nth-of-type(even) {
+    transform: translateX(-20px);
+  }
+
+  &__items-info.element-show span:nth-of-type(odd) {
+    opacity: 1;
+    transition-delay: 0.5s;
+    transform: translateX(0%);
+  }
+  &__items-info.element-show span:nth-of-type(even) {
+    opacity: 1;
+    transition-delay: 1s;
+    transform: translateX(0%);
+  }
+}
+
+.section-four {
+  &__items.element-animation div:first-of-type {
+    opacity: 0;
+    transition: all 1.5s;
+    transform: translateX(-50px);
+  }
+  &__items.element-animation div:last-of-type {
+    opacity: 0;
+    transition: all 1.5s;
+    transform: translateY(20px);
+  }
+  &__items.element-show div:first-of-type {
+    opacity: 1;
+    transition-delay: 0.2s;
+    transform: translateX(0%);
+  }
+  &__items.element-show div:last-of-type {
+    opacity: 1;
+    transform: translateY(0%);
+    @media (max-width: $tablet) {
+      transform: translateY(0%);
+      transform: translateX(50%);
+    }
+  }
+}
+
+.section-five {
+  &__description.element-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    &.element-show {
+      opacity: 1;
+      transition: all 1.5s;
+      transform: translateY(0%);
+    }
+  }
+  &__items.element-animation div {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  &__items.element-show div {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateX(0%);
+  }
+}
